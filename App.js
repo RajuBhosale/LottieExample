@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
+import LottieView from 'lottie-react-native';
+import ninja from './animations/ninja.json';
 
 const instructions = Platform.select({
   ios: `Press Cmd+R to reload,\nCmd+D or shake for dev menu`,
@@ -12,6 +14,11 @@ export default function App() {
       <Text style={styles.welcome}>Welcome to React Native!</Text>
       <Text style={styles.instructions}>To get started, edit App.js</Text>
       <Text style={styles.instructions}>{instructions}</Text>
+      <LottieView 
+        source={ninja}
+         autoPlay loop style={{height: 400}}
+      >
+      </LottieView>
     </View>
   );
 }
